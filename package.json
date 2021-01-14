@@ -1,7 +1,7 @@
 {
   "name": "instagram-clone-v2",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is  unique Instagram Clone called with minimilst funtionality. the Goal of the this Project is to make a simple CRUD application for posts. the app uses randome user api and random piture api to render post in home screen,",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,5 +28,6 @@
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.11.9"
-  }
+  },
+  "devDependencies": {}
 }
