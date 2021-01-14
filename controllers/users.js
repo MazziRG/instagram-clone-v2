@@ -106,8 +106,12 @@ router.put('/user/:id',isAuthenticated,(req,res)=>{
             req.body[key] = user[key]
             
         }
+
         console.log(key, value)
-      }
+    }
+    if(user.username == "user.display"){
+        req.body= user
+    }
     User.findByIdAndUpdate(req.params.id, 
         req.body,{new:true},
         (error, updatedUser )=>{
