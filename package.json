@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "v14.11.0"
+    "node": "14.11.0"
   },
   "repository": {
     "type": "git",
