@@ -1,25 +1,23 @@
 {
   "name": "instagram-clone-v2",
   "version": "1.0.0",
-  "description": "This will be an Instagram clone I will be Working on",
+  "description": "This is  unique Instagram Clone called with minimilst funtionality. the Goal of the this Project is to make a simple CRUD application for posts. the app uses randome user api and random piture api to render post in home screen,",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "engines": {
-    "node": "14.11.0"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MannyRG/Instagram-Clone-v2.git"
+    "url": "git+https://github.com/MannyRG/instagram-clone-v2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MannyRG/Instagram-Clone-v2/issues"
+    "url": "https://github.com/MannyRG/instagram-clone-v2/issues"
   },
-  "homepage": "https://github.com/MannyRG/Instagram-Clone-v2#readme",
+  "homepage": "https://github.com/MannyRG/instagram-clone-v2#readme",
+  "keywords": [],
   "dependencies": {
     "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
@@ -27,8 +25,6 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.10.9"
-  },
-  "devDependencies": {},
-  "keywords": []
+    "mongoose": "^5.11.11"
+  }
 }
