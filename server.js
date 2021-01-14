@@ -39,10 +39,11 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController)
-const usersController = require('./controllers/users.js');
-app.use('', usersController)
 const postsController = require('./controllers/posts.js');
 app.use('/post', postsController)
+const usersController = require('./controllers/users.js');
+app.use('/app', usersController)
+
 
 
 
@@ -52,9 +53,8 @@ app.use('/post', postsController)
 
 
 
-app.get('/home',(req,res)=>{
-  res.render('users/home.ejs',
-  {currentUser: req.session.currentUser,})
+app.get('/',(req,res)=>{
+  res.render('users/login.ejs')
 } )
 
 

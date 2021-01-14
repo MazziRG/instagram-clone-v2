@@ -13,18 +13,9 @@ const isAuthenticated = (req,res, next)=>{
     if(req.session.currentUser){
         return next()
     }else{
-        res.redirect("/login")
+        res.redirect("/")
     }
 }
-
-
-router.get('/login',(req,res)=>{
-
-    res.render('users/login.ejs',{
-      currentUser: req.session.currentUser,
-    })
-
-})
 
 
 
@@ -60,9 +51,8 @@ router.post('/',(req,res)=>{
         User.create(req.body,
         (err,newUser)=>{
         console.log(newUser)
-        res.redirect('/')
+        res.redirect('/app')
     })
-
 } )
 ////////////////////////
 
@@ -72,7 +62,7 @@ router.post('/',(req,res)=>{
 //// show
 router.get('/:user',isAuthenticated,(req,res)=>{
     User.findOne({username:req.session.currentUser.username},(error, foundUser)=>{
-        // console.log("show Route",foundUser.posts)
+        console.log("show Route",foundUser)
         Post.find({_id:{$in:foundUser.posts}},(err, foundPost)=>{
             // console.log(foundPost)
             res.render('users/show.ejs',{
@@ -113,7 +103,7 @@ router.put('/user/:id',isAuthenticated,(req,res)=>{
         (error, updatedUser )=>{
             req.session.currentUser = updatedUser
             console.log("Updated User",updatedUser )
-            res.redirect('/')
+            res.redirect(`/app/${updatedUser.username}`)
     })
 } )
 
@@ -129,7 +119,7 @@ router.put('/pass/:id',isAuthenticated,(req,res)=>{
             (error, updatedUser )=>{
                 req.session.currentUser = updatedUser
                 console.log("Updated Password",updatedUser )
-                res.redirect('/')
+                res.redirect(`/app/${updatedUser.username}`)
         })
 
     }else{

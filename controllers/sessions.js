@@ -24,16 +24,16 @@ sessions.post('/', (req,res)=>{
             res.send("oops the db had problems")
             
         }else if(!foundUser){ // if User was not found
-            res.redirect('/login')
+            res.redirect('/')
             
         }else{ // if User was found
     
             if(bcrypt.compareSync(req.body.password, foundUser.password)){
                 req.session.currentUser = foundUser
-                res.redirect('/')
+                res.redirect('/app')
     
             }else{
-                res.redirect('/login')
+                res.redirect('/')
 
             }
         }
