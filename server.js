@@ -45,10 +45,10 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // const sessionsController = require('./controllers/sessions.js');
 // app.use('/sessions', sessionsController)
-// const postsController = require('./controllers/posts.js');
-// app.use('/post', postsController)
-// const usersController = require('./controllers/users.js');
-// app.use('/app', usersController)
+const postsController = require('./controllers/posts.js');
+app.use('/post', postsController)
+const usersController = require('./controllers/users.js');
+app.use('/app', usersController)
 
 
 /////
