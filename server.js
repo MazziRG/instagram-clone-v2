@@ -51,21 +51,11 @@ const usersController = require('./controllers/users.js');
 app.use('/app', usersController)
 
 
-
-
-
-
 /////
-
-
 
 app.get('/',(req,res)=>{
   res.render('users/login.ejs')
 } )
-
-
-
-
 
 
 
