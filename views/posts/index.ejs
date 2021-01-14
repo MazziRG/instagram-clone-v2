@@ -1,0 +1,71 @@
+<%- include('../partials/header.ejs') %> 
+
+
+
+
+<div class=" d-flex h-100 justify-content-center">
+
+
+    <div class="container-profile">
+
+        <div class="container-fluid profile-phb" style="height:16rem">
+
+                <div class="profile-picture" >
+                    <img src=" currentUser.img " class="img-profile img-thumbnail" alt="img-profile">
+                </div>
+                <div class="profile-header">
+                    <div class="row">
+                        <div class="col-3"><h3>currentUser.username </h3></div>
+                        <div class="col"><button> Edit Profile</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><p class="d-flex flex-column flex-sm-row"> <b class="mx-1">currentUser.posts.length </b> Posts</p></div>
+                        <div class="col-3"><p class="d-flex flex-column flex-sm-row"> <b class="mx-1">currentUser.followers </b> followers</p></div>
+                        <div class="col-3"><p class="d-flex flex-column flex-sm-row"> <b class="mx-1"> currentUser.following </b> following</p></div>
+                    </div>
+                </div>
+                <div class="profile-bio"">
+                    <b>
+
+                    </b>
+                    <div>
+                         currentUser.description
+                    </div>
+                </div>
+
+        </div>
+
+
+
+        <div class="" style="height:auto">
+            <div style="height:100%">
+                <div class="d-flex flex-wrap">
+
+                    <% for(let i = 0; i < Posts.length; i++ ){ %>
+                    <div class="col-4 "><a href="/post/<%=Posts[i].id %>"><div class="postDiv"><img src="<%= Posts[i].img %>" style="height: 100%; width: 100%;" alt="sky"></div></a></div>
+                    <%}%>
+
+                    <div class="col-4 ">
+                        <div class="postDiv ">
+                            <a href="/test/new" class="h-100 w-100 d-flex align-items-center" style="background-color: lightgray;">
+                             <svg width="30" height="30" viewBox="0 0 16 16" class="bi bi-plus-circle rounded mx-auto d-block" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                            </a> 
+                    </div>
+                </div>
+
+                </div> 
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<%- include('../partials/footer.ejs') %>
+
+

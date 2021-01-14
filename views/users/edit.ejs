@@ -1,0 +1,82 @@
+
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+<!-- Nav tabs -->
+<div class=" d-flex vh-100 justify-content-center mt-4 ">
+<div class="my-Container card h-75">
+    <div class="d-flex h-100">
+
+
+
+        <div class="nav flex-column  me-3 tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class=" my-nav-tabs active-tab edit-tab" id="v-pills-home-tab" data-bs-toggle="pill" href="#Edit-Profile" role="tab" aria-controls="v-pills-home" aria-selected="true"><div class="single-tab ms-4">Edit Profile</div></a>
+          <a class="my-nav-tabs tab-hover password-tab" id="v-pills-profile-tab" data-bs-toggle="pill" href="#Change-Password" role="tab" aria-controls="v-pills-profile" aria-selected="false"><div class="single-tab ms-4">Change Password</div></a>
+        </div>
+
+        <div class="tab-content mx-5 w-100"  id="v-pills-tabContent">
+
+            <div class="tab-pane active "  id="Edit-Profile" role="tabpanel" aria-labelledby="Edit Profile-tab"> 
+                    
+                <form action="/user/<%= userId %>?_method=PUT"  method="POST">
+                    <div class=" my-4 row">
+                        <label for="exampleFormControlInput1" class="form-label col-2"> Profile Img </label>
+                        <input type="text" class="col-6" id="exampleFormControlInput1" placeholder="url" name="img">
+                    </div>
+                    <div class=" my-4 row">
+                        <label for="exampleFormControlInput1" class="form-label col-2"> Full Name</label>
+                        <input type="text" class="col-6" id="exampleFormControlInput1" placeholder="Full Name" name="fullname">
+                    </div>
+                    <div class="my-4 row">
+                        <label for="exampleFormControlInput1" class="form-label col-2">Username</label>
+                        <input type="text" class="col-6" id="exampleFormControlInput1" placeholder="name@example.com" name="username">
+                    </div>
+                    <div class=" my-4 row" >
+                        <label for="exampleFormControlTextarea1" class=" col-2 form-label">Bio</label>
+                        <textarea class="col-6" id="exampleFormControlTextarea1" name="description" rows="3"> </textarea >
+                    </div>
+                    <div class=" my-4 row">
+                        <label for="exampleFormControlInput1" class="form-label col-2"> Email</label>
+                        <input type="email" class="col-6" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form> 
+            
+            </div>
+
+
+          <div class="tab-pane " id="Change-Password" role="tabpanel" aria-labelledby="Change-Password-tab">
+            <form action="/pass/<%= userId %>?_method=PUT"  method="POST">
+                    <div class="my-5 row">
+                        <label for="exampleFormControlInput1" class="form-label col-3"> Old Password</label>
+                        <input type="text" class=" col-6" id="editPass" placeholder="name@example.com" name="password">
+                    </div>
+                    <div class="my-5 row">
+                        <label for="exampleFormControlInput1" class="form-label col-3"> New Password</label>
+                        <input type="text" class=" col-6" id="editNewPass" placeholder="name@example.com" name="newPassword">
+                    </div>
+                    <div class="my-5 row">
+                        <label for="exampleFormControlInput1" class="form-label col-3">Confirm New Password</label>
+                        <input type="text" class="col-6" id="editConfirm" placeholder="name@example.com" name="confirmpass">
+                    </div>
+                    <button type="submit" class="btn btn-primary" >Change Password</button>
+                </form>
+          </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+<%- include('../partials/footer.ejs') %>
+

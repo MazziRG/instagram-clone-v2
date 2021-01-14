@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs') %> 
+
+<div class=" d-flex justify-content-center my-5" >
+    <div class="my-Container d-flex justify-content-center align-items-end  mb-5" >
+        <div class="col-6 " style=" text-align: right;">
+            <span><img src="https://i.ibb.co/1zqJMvF/instagram.png" alt="instagram" class=" w-75 h-75" /></span>
+        </div>
+
+        <div class="col-6 pe-5">
+            <div class="me-5 pe-4">
+                <div class="card py-3 px-5">
+                        <div class="w-100" style="text-align: center;">
+                            <img src="https://i.ibb.co/nc6jkCq/1200px-Instagram-logo-svg.png" alt="1200px-Instagram-logo-svg" class="w-75">
+                        </div>
+                            <b style="text-align: center; color:gray;" class= " mb-3" >Sign up to see photos and videos from your friends.
+                            </b>
+                        
+                        <form action="/sessions/" method="POST" >
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control bg-light" id="floatingUsername" name="username" placeholder=" " style=" height: 40px;">
+                                <label for="floatingUsername" class="col-form-label-sm p-2"> Username</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control bg-light" id="floatingPassword" name="password"  placeholder=" " style=" height: 40px;">
+                                <label for="floatingPassword" class="col-form-label-sm p-2">Password</label>
+                            </div>
+                            <div class="d-grid"> 
+                                <input type="submit" class=" btn btn-primary p-0" value="Log In">
+                            </div>
+                        </form>
+
+                        <div style="text-align: center;" class="my-3">
+                            <span style="font-size: .75rem;">By signing up, you agree to our Terms , Data Policy and Cookies Policy .</span>
+                        </div>
+                </div>
+                <div class="card px-5 py-3 mt-3 ">
+                        <span style="text-align: center;"> Don't have an account?
+                            <a href="/new"><span> Sign Up</span></a>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

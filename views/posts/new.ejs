@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+
+    
+<div class="card m-auto my-5" style=" width: 50%; height: 50%;">
+    <div class="card"><a> </a></div>
+    <h1 style="text-align: center;"> Add Your New Post here </h1>
+    <form action="/post/" method="POST" class="align-items-center mx-3 ">
+        <div class="form-group my-3">
+            <label for="">Add Photo</label>
+            <input type="text" class="form-control" placeholder="URL HERE" name="img">
+        </div>
+
+        <div class="form-group my-3">
+            <label for="">Caption:</label>
+            <textarea type="text" class="form-control" placeholder="Description here"  name="caption"></textarea>
+        </div>
+
+          <input type="submit" value="Create Post" class="btn btn-primary mb-3">
+    </form>
+
+</div>
+
+<!-- https://assets.pokemon.com/assets/cms2/img/pokedex/full/103.png -->
+
+
+<%- include('../partials/footer.ejs') %>
+
+

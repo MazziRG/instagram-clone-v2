@@ -1,0 +1,26 @@
+
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+
+<div class="card text-center mx-auto my-5" style="width: 20rem; height: 50%;">
+    <h5 class="class-title"> Edit Your Post</h5>
+        <form action="/post/<%=post.id%>?_method=DELETE" method="POST">
+         <input type="submit" value="DELETE" class="btn btn-danger" >
+        </form>
+
+    <img class="card-img-top" src="<%= post.img%> " alt="Card image cap" style="max-height: 300px;">
+    <div class="card">
+        <h5 class=" card-header">Edit Caption here:</h5>
+        <div class="card-body"></div>
+            <form action="/post/<%=post.id%>?_method=PUT" method="POST" >
+                <textarea type="text" name="caption" style="min-height: 100px;"><%=post.caption%> </textarea>
+                <div class="my-3"><input type="submit" value="Update" class=" btn btn-success" ></div>
+            </form> 
+        </div>
+    </div>
+  </div>
+
+
+<%- include('../partials/footer.ejs') %>
+

@@ -1,0 +1,63 @@
+
+<%- include('../partials/header.ejs') %> 
+
+
+<%- include('../partials/nav.ejs') %>
+
+
+
+
+<div class=" d-flex justify-content-center ">
+    <div class="container-home">
+
+            <div class="col-7 h-100" id="posts">
+                
+            </div>
+
+
+
+
+
+            <!-- <div> -->
+            <div class="col-5 sidebar-profile ">
+
+                    <div class=" h-100 sidebar-fixed mt-5">
+
+                        <div class="d-flex px-5 ">
+                            
+                            <div>
+                                <img src="<%=currentUser.img %>" class="sidebar-profile-img img-thumbnail" alt="img-profile">
+                            </div>
+
+                            <div class=" ms-3 flex-column d-flex justify-content-center"> 
+                                <span>
+                                    <%= currentUser.username%>
+                                </span>
+                                <span>
+                                    <%= currentUser.fullname %>
+                                </span>
+                            </div>
+
+                            <div>
+                                <!-- Nothing goes here -->
+                            </div>
+
+                     </div>
+        
+
+
+
+                        <div class="h-75 px-5 mt-4" id="forYou">
+                            <div class="d-flex justify-content-between" ><p>Suggestions For You</p> <p>See All</p> </div>
+                            
+                        </div>
+                    
+                    </div>
+            </div>
+
+
+
+
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

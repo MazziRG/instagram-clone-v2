@@ -1,0 +1,63 @@
+
+/* *{
+
+    border: 1px solid  black;
+   
+} */
+
+
+
+.loginBox{
+border: 1px solid darkgray;
+    
+margin: 1rem;
+height: 18rem;
+}
+
+.loginFeild{
+
+margin: 2rem;
+
+}
+
+.logBttnBox{
+
+    margin: 1rem auto;
+
+}
+
+.loginBttn{
+
+    width: 100%;
+
+}
+
+.leftFeild{
+
+    display:flex;
+    flex-direction : column;
+    justify-content: center
+
+}
+
+
+.signupBox{
+    border: 1px solid darkgray;
+    margin: 1rem;
+
+}
+.signFeild{
+    display:flex;
+    justify-content:center;
+    align-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem
+
+}
+
+
+
+
+
+
+
