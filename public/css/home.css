@@ -2,6 +2,12 @@
      border: 1px solid black;
 
 } */
+
+
+.navIcons:hover{
+
+    color: blue;
+}
 .card-post-img{
     height:35px;
     width:35px;
