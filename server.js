@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const express = require('express')
 const app = express()
 const methodOverride = require('method-override');
-const cors = require('cors')
 
 // /sessions
 const session = require('express-session')
@@ -23,7 +22,6 @@ app.use(methodOverride('_method'));
 app.use(express.json())
 app.use(express.urlencoded({extends: true}))
 app.use(express.static('public'))
-app.use(cors())
 
 //// mongoose
 const db = mongoose.connection;
@@ -42,7 +40,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController)
 const usersController = require('./controllers/users.js');
-app.use('/', usersController)
+app.use('', usersController)
 const postsController = require('./controllers/posts.js');
 app.use('/post', postsController)
 
