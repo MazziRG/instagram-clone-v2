@@ -18,7 +18,7 @@
 
             <div class="tab-pane active "  id="Edit-Profile" role="tabpanel" aria-labelledby="Edit Profile-tab"> 
                     
-                <form action="/app/user/<%= userId %>?_method=PUT"  method="POST">
+                <form action="/user/<%= userId %>?_method=PUT"  method="POST">
                     <div class=" my-4 row">
                         <label for="exampleFormControlInput1" class="form-label col-2"> Profile Img </label>
                         <input type="text" class="col-6" id="exampleFormControlInput1" placeholder="url" name="img">
@@ -46,7 +46,7 @@
 
 
           <div class="tab-pane " id="Change-Password" role="tabpanel" aria-labelledby="Change-Password-tab">
-            <form action="/app/pass/<%= userId %>?_method=PUT"  method="POST">
+            <form action="/pass/<%= userId %>?_method=PUT"  method="POST">
                     <div class="my-5 row">
                         <label for="exampleFormControlInput1" class="form-label col-3"> Old Password</label>
                         <input type="text" class=" col-6" id="editPass" placeholder="name@example.com" name="password">

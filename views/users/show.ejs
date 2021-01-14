@@ -17,7 +17,7 @@
                 <div class="profile-header">
                     <div class="d-flex mb-3">
                         <div class="me-3" ><h3><%= currentUser.username %></h3></div>
-                        <div class="me-3"><a class="btn px-2 py-1" style="border: 1px solid lightgrey;" href="/app/<%= currentUser._id %>/edit"><b> Edit Profile</b> </a></div>
+                        <div class="me-3"><a class="btn px-2 py-1" style="border: 1px solid lightgrey;" href="/<%= currentUser._id %>/edit"><b> Edit Profile</b> </a></div>
                     </div>
                     <div class="row">
                         <div class="col-3"><p class="d-flex flex-column flex-sm-row"> <b class="mx-1"><%= currentUser.posts.length %> </b> Posts</p></div>

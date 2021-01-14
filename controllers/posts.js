@@ -8,7 +8,7 @@ const isAuthenticated = (req,res, next)=>{
     if(req.session.currentUser){
         return next()
     }else{
-        res.redirect("/app")
+        res.redirect("/")
     }
 }
 
@@ -31,7 +31,7 @@ router.post('/', isAuthenticated,(req,res)=>{
         User.findByIdAndUpdate(req.session.currentUser._id,{$push:{posts:newPost}}, (err,foundUser)=>{
             // console.log("New Posts", foundUser.posts)
             // console.log(newPost)
-            res.redirect(`/app/${req.session.username}`)
+            res.redirect(`/${req.session.username}`)
 
         })
     })
@@ -88,7 +88,7 @@ router.delete('/:id',isAuthenticated,(req,res)=>{
         Post.findByIdAndRemove(req.params.id
             ,(error, deletedPost )=>{
                 console.log("deleted Post:",deletedPost)
-                res.redirect(`/app/${req.session.username}`)
+                res.redirect(`/${req.session.username}`)
 
         })
 
