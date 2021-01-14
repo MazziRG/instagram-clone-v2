@@ -167,8 +167,8 @@ const getManyPost=()=>{
 }
 
 
-getSuggestions()
-getManyPost()
+// getSuggestions()
+// getManyPost()
 
         $(window).scroll(()=>{
 
