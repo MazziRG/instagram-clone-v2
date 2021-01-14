@@ -110,7 +110,8 @@ router.put('/user/:id',isAuthenticated,(req,res)=>{
         console.log(key, value)
     }
     if(user.username == "user.display"){
-        req.body= user
+        req.body.username = user.username
+        req.body.password = user.password
     }
     User.findByIdAndUpdate(req.params.id, 
         req.body,{new:true},
