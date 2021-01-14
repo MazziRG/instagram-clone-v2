@@ -36,5 +36,6 @@ this clone was made to look as similar to instagram.
 other features like following and commection would be added in later version of this clone.
 willl be using MULTER to upload img wihtout url in later versions
 
-
+### Old version 
+* https://bitgram.herokuapp.com/profile
 
