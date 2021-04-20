@@ -2,7 +2,7 @@
 This is  unique Instagram Clone called with minimilst funtionality.
 the Goal of the this Project is to make a simple CRUD application for posts.
 the app uses randome user api and random piture api to render post in home screen,
-## Instagram-Clone
+## link
 * https://bitsgram.herokuapp.com/login
 
 ## features
